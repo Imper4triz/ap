@@ -99,7 +99,7 @@ void LimpaFicheiroEstac(char *ficheirobase, char *ficheirovalido, char *ficheiro
     fclose(f_err);
 }
 
-void MostrarFicheiroEstacionamento(char *nomeFicheiro)
+void MostrarFicheiroEstacionamento(const char *nomeFicheiro)
 {
     FILE *f = fopen(nomeFicheiro, "r");
 
