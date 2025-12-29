@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1767014572 source:c:\users\gisel\desktop\projetoapparque\estacionamento.c
+	<stdio.h>
+	<stdlib.h>
+	"Estacionamento.h"
+	"Tarifas.h"
+
+1767014572 c:\users\gisel\desktop\projetoapparque\estacionamento.h
+	"Instalacao.h"
+	"Tarifas.h"
+	<stdio.h>
+
+1767015561 source:c:\users\gisel\desktop\projetoapparque\tarifas.c
+	"Tarifas.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1767015560 c:\users\gisel\desktop\projetoapparque\tarifas.h
+	<stdio.h>
+
+1767014572 source:c:\users\gisel\desktop\projetoapparque\instalaçao.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Instalacao.h"
+	"Tarifas.h"
+	"Util.h"
+
+1766797684 c:\users\gisel\desktop\projetoapparque\instalacao.h
+	<string.h>
+	<stdio.h>
+
+1766795469 c:\users\gisel\desktop\projetoapparque\util.h
+	<stdio.h>
+
+1766867550 source:c:\users\gisel\desktop\projetoapparque\main.c
+	<stdlib.h>
+	<stdio.h>
+	"Instalacao.h"
+	"Tarifas.h"
+	"Estacionamento.h"
+	<locale.h>
+	"Util.h"
+
+1767014572 source:c:\users\gisel\desktop\projetoapparque\util.c
+	"Estacionamento.h"
+	"Util.h"
+	"Instalacao.h"
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+
+1766875437 source:c:\users\gisel\desktop\projetoapparque\matrizes.c
+
+1766869683 c:\users\gisel\desktop\projetoapparque\matrizes.h
+	<stdio.h>
+	"Instalacao.h"
+
