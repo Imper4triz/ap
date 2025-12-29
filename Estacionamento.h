@@ -13,10 +13,10 @@ typedef struct estacionamento{
 
 typedef struct {
     char status; // 'X' = ocupado, '-' = livre
-    char matricula[10]; // guardar matrícula do carro
+    char matricula[10]; // guardar matrÃ­cula do carro
 } Lugar;
 
-void MostrarFicheiroEstacionamento(char *nomeFicheiro);
+void MostrarFicheiroEstacionamento(const char *nomeFicheiro);
 int personalizapp(Confparque config);
 void MostrarMapaOcupacao_ComMapa(Confparque config, char *ficheiroOcupacao, Lugar mapa[][MAX_FILAS][MAX_LUGARES]);
 void InicializarMapa(Lugar mapa[][MAX_FILAS][MAX_LUGARES], Confparque config);
