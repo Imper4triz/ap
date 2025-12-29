@@ -2,7 +2,7 @@
 //  Funcs.c
 //  ProjetoEstacionamento
 //
-//  Created by GonÁalo Henrique Viegas Bernardino on 05/12/2025.
+//  Created by Gon√ßalo Henrique Viegas Bernardino on 05/12/2025.
 //
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +22,7 @@ int lerconfig(Confparque *config){
 
     FILE *f = fopen(Ficheiro_config, "r");
     if (f == NULL) {
-        return 0; //Ficheiro n„o existe (primeira vez)
+        return 0; //Ficheiro n√£o existe (primeira vez)
     }
 
     int numPisos = 0, numFilas = 0, numLugares = 0; //criamos variaveis temporarias para, antes de colocar os valores na struct ler e validar os mesmos.
@@ -32,7 +32,7 @@ int lerconfig(Confparque *config){
     if (resultado != 3) { //O resultado deve ler 3 valores. (numPisos, numFilas e numLugares). Caso contrario retornar 0 (falha)
         return 0;
     }
-//Depois, validar se os n˙meros colocados s„o validos, por isso retornar 0 se forem menores ou iguais a 0, ou maiores que os maximos que definimos no topo.
+//Depois, validar se os n√∫meros colocados s√£o validos, por isso retornar 0 se forem menores ou iguais a 0, ou maiores que os maximos que definimos no topo.
     if (numPisos <= 0 || numPisos > MAX_PISOS) return 0;
     if (numFilas <= 0 || numFilas > MAX_FILAS) return 0;
     if (numLugares <= 0 || numLugares > MAX_LUGARES) return 0;
@@ -67,27 +67,27 @@ int gravarconfig(const Confparque *config) {
 
        fclose(f);
 
-       printf("\nConfiguraÁ„o guardada com sucesso!\n");
+       printf("\nConfigura√ß√£o guardada com sucesso!\n");
        return 1;
 
 }
 
 
 int personalizapp(Confparque config) {
-    printf("… NECESS¡RIO CONFIGURAR A APLICA«√O\n");
-    printf("===CONFIGURA«√O DO PARQUE===\n\n");
+    printf("√â NECESS√ÅRIO CONFIGURAR A APLICA√á√ÉO\n");
+    printf("===CONFIGURA√á√ÉO DO PARQUE===\n\n");
     do {
         printf("Qual o nome da empresa de estacionamentos: ");
         scanf("%s", config.Nomempresa);
         if(strlen(config.Nomempresa)==0){
-            printf("O nome da empresa È inv·lido.\n");
+            printf("O nome da empresa √© inv√°lido.\n");
         }
     } while(strlen(config.Nomempresa)==0);
     do {
-        printf("Qual È o seu nome: ");
+        printf("Qual √© o seu nome: ");
         scanf("%s", config.Nominstal);
         if(strlen(config.Nominstal)==0) {
-            printf("nome inv·lido.\n");
+            printf("nome inv√°lido.\n");
         }
     } while(strlen(config.Nominstal)==0);
 
@@ -116,15 +116,15 @@ int personalizapp(Confparque config) {
 
     if (gravarconfig(&config)) {
     } else {
-        printf("Erro ao gravar configuraÁ„o!\n");
+        printf("Erro ao gravar configura√ß√£o!\n");
         return 0;
     }
     LimpaFicheiroEstac("estacionamentos.txt", "estacionamentos_validos.txt", "relatorio_erros.txt", config);
-    mostrarMensagem("Ser· apresentado o Registo de estacionamentos.");
+    mostrarMensagem("Ser√° apresentado o Registo de estacionamentos.");
     MostrarFicheiroEstacionamento("estacionamentos_validos.txt");
     FILE *F1 = fopen("configfeita.txt", "w"); {
         int resultado = config.numpisos*config.numfilas*config.numlugares;
-        fprintf(F1, "Empresa: %s\tUsu·rio: %s\tTamanho do parque %d Pisos * %d Filas * %d Lugares\tQuantidade de lugares totais: %d", config.Nomempresa, config.Nominstal, config.numpisos, config.numfilas, config.numlugares, resultado);
+        fprintf(F1, "Empresa: %s\tUsu√°rio: %s\tTamanho do parque %d Pisos * %d Filas * %d Lugares\tQuantidade de lugares totais: %d", config.Nomempresa, config.Nominstal, config.numpisos, config.numfilas, config.numlugares, resultado);
         fclose(F1);
     }
         return 1;
